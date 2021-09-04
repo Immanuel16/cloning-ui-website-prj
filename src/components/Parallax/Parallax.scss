@@ -1,0 +1,30 @@
+.parallax-custom{
+    height: 400px;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .title-parallax{
+        display: flex;
+        align-items: center;
+        height: 400px;
+        margin-left: 50px;
+        h2{
+            font-size: 42px;
+            font-weight: 550;
+            color: white;
+            line-height: 50.4px;
+            padding: 5px 20px;
+            transition: all 0s ease 0s;
+        }
+    }
+    
+    .desc{
+        color: #fff;
+        font-size: 20px;
+        position: absolute;
+        bottom: 125px;
+        left: 70px
+    }
+}

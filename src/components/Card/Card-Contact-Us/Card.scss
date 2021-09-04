@@ -1,0 +1,81 @@
+@import '../../../styles/variables';
+
+
+#container-card-contact-us{
+    visibility: visible;
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    margin: 40px;
+    box-shadow: 0 0 30px rgba($color: rgb(197, 181, 181), $alpha: 0.29);
+    border-radius: 10px;
+    // width: %;
+    position: relative;
+    background: #fff;
+    margin-top: -50px;
+    // z-index: 99999 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 1s cubic-bezier(0.5, 0, 0, 1) 0.2s;
+    // transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+
+.label-form-custom{
+    margin-bottom: 0.5rem !important;
+    font-size: 17px;
+}
+
+.linesTest{
+    background: $primary-color;
+    height: 2px;
+    position: relative;
+    top: -10px;
+    width: 70px;
+    transition: all .5s ease;
+}
+.linesTest::before{
+    content: "";
+    background: $primary-color;
+    left: -40px;
+    height: 2px;
+    top: 5px;
+    width: 70px;
+    position: absolute;
+    transition: all .5s ease;
+}
+.linesTest::after{
+    background: $primary-color;
+    content: "";
+    height: 2px;
+    right: -40px;
+    position: absolute;
+    transition: all .5s ease;
+    top: 5px;
+    width: 70px;
+}
+
+#contact-area{
+    margin-top: -100px;
+    &.bg-img-line-bottom{
+        background-image: url(https://www.gbiprj.org/img/bg-pattern-bottom.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.p-b-100{
+        padding-bottom: 100px !important;
+    }
+    .contact-area-container{
+        padding: 40px;
+        border-radius: 10px;
+        
+    }
+}
+#container-card-contact-us:hover{
+    z-index: 100;
+}
+.zIndexTop{
+    // position: relative !important;
+    margin-top: -75px !important;
+    // top: 10px !important;
+    z-index: 1200 !important;
+}

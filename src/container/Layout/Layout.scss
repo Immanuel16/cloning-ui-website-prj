@@ -1,0 +1,284 @@
+@import '../../styles/variables';
+
+*{
+    font-family: Roboto, 'sans-serif';
+}
+
+.default-wrapper {
+    background-color: #fff;
+    min-height: calc(100vh - 112px);
+}
+
+.default-container {
+    padding: 30px 20px;
+}
+
+.default-content {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 22% auto 20%;
+    margin: 15px 0;
+
+    &-container {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        align-items: start;
+        color: #00000099;
+    }
+}
+
+.flex-center {
+    &-cwh {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .space-between-custom{
+            justify-content: space-around;        }
+        .desc-text-emoney{
+            color: white;
+            font-size: 1.2em;
+            line-height: 35px;
+            text-align: center;
+        }
+        .mr-2{
+            margin-right: 10px;
+        }
+        .custom-btn{
+            border-radius: 30px;
+            // display: inline-block;
+            padding: 14px 20px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 14px;
+            height: 55px;
+            min-width: 150px;
+            margin-right: 20px;
+            margin-top: 25px !important;
+            color: #242424;
+            background: #fff;
+            &.bg-yellow{
+                background: #fec409;
+            }
+            &.bg-violet{
+                background: $primary-color;
+                color: white;
+                margin-bottom: 25px;
+            }
+            &.bg-violet:hover{
+                background: $secondary-color;
+            }
+        }
+    }
+
+    &-cw {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-ch {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &-chr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    &-rwh {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-rw {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &-rh {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.title-section{
+    font-size: 35px;
+    line-height: 35px;
+    text-transform: uppercase;
+    font-weight: 300 !important;
+    .second-text{
+        font-weight: 600 !important;
+    }
+}
+.subtitle-section{
+    color: #757575;
+    font-size: 19px;
+}
+.lines{
+    background: $primary-color;
+    height: 2px;
+    position: relative;
+    top: -10px;
+    width: 70px;
+    transition: all .5s ease;
+}
+.lines::before{
+    content: "";
+    background: $primary-color;
+    left: -40px;
+    height: 2px;
+    top: 5px;
+    width: 70px;
+    position: absolute;
+    transition: all .5s ease;
+}
+.lines::after{
+    background: $primary-color;
+    content: "";
+    height: 2px;
+    right: -40px;
+    position: absolute;
+    transition: all .5s ease;
+    top: 5px;
+    width: 70px;
+}
+.container-title-section:hover{
+    .lines, .lines::after, .lines::before{
+        width: 90px;
+    }
+}
+
+.btn-rounded{
+    background: $primary-color !important;
+    color: white !important;
+    float: right;
+    border-radius: 30px !important;
+    padding: 15px 30px !important;
+    text-transform: capitalize;
+    font-size: 16px !important;
+    line-height: 24px;
+    margin-right: 15px;
+}
+.btn-rounded:hover{
+    background: $secondary-color !important;
+}
+
+#area-subscribe-ringkasan{
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+    // max-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://www.gbiprj.org/img/ir-prj2.jpg);
+    position: relative;
+    .overlay{
+        background:rgba(0,0,0, 0.6) url(https://www.gbiprj.org/img/overlay.png) repeat scroll 0 100%;
+        height: 300px;
+        .container{
+            color: #fff;
+            padding: 60px 20px 60px 80px;
+            position: relative;
+            z-index: 99;
+            display: inline-flex;
+            height: 300px;
+            img{
+                animation: image_animation 5s infinite;
+                animation-timing-function: linear;
+                position: absolute;
+                left: -40px;
+                margin-top: -80px;
+                width: 200px;
+                max-width: 100%;
+                height: 336px;
+            }
+            .container-text-button{
+                .simple-word{
+                    display: block;
+                    // margin-top: -100px;
+                    font-size: 17px;
+                    font-weight: 300px;
+                    text-align: right !important;
+                }
+                .btn-custom{
+                    border-radius: 30px;
+                    display: inline-block;
+                    font-size: 14px;
+                    padding: 14px 20px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    min-width: 150px;
+                    margin-right: 20px !important;
+                    margin-top: 25px !important;
+                    i{
+                        font-size: 20px;
+                        margin-right: 10px !important;
+                    }
+                    &.link-email{
+                        background: #fff;
+                        color: #333;
+                    }
+                    &.link-whatsapp{
+                        color: #fff;
+                        background: #09d261;
+                    }
+                }
+            }
+        }
+        .text-right-custom{
+            text-align: right !important;
+        }
+    }
+}
+
+@keyframes image_animation{
+	0%   { position: relative; top:0px}
+	25%  { position: relative; top:-20px;}
+	50% { position: relative; top:-40px;}
+	75% { position: relative; top:-20px;}
+	100% { position: relative; top:0px;}
+}
+
+
+.card{
+    border-radius: 2px !important;
+    img{
+        padding: 0 !important;
+        object-fit: cover;
+    }
+}
+
+.card-header{
+    background: #fff !important;
+}
+
+#contact-area{
+    z-index: 99;
+    // position: relative;
+    &.bg-img-line-bottom{
+        background-image: url(https://www.gbiprj.org/img/bg-pattern-bottom.png);
+        background-repeat: no-repeat;
+        width: 100%;
+        background-position: center;
+        z-index: -1000 !important;
+    }
+    &.p-b-100{
+        // padding-bottom: 100px !important;
+    }
+    .contact-area-container{
+        // padding: 40px;
+        border-radius: 10px;
+        z-index: 99;
+    }
+}

@@ -1,0 +1,283 @@
+@import '../../styles/variables';
+@import '../../styles/fontawesome-free/css/all.min.css';
+
+.top-area{
+    background-color: #f1f2f7;
+    background-image: url('https://www.gbiprj.org/img/green-dust-and-scratches.png');
+    padding: 5px 20px;
+    text-align: right;
+    height: 36.67px;
+    a{
+        visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 1s cubic-bezier(0.5, 0, 0, 1) 0.2s;
+        color: #1b1b1b;
+        .time-live{
+            margin-left: 10px;
+            color: $primary-color;
+            font-weight: 700;
+        }
+    }
+}
+
+.divider-icon{
+    // background: #f1f2f7;
+    width: 0.1px !important;
+    border: 0.5px dashed #e8ecec;
+    opacity: 0.6;
+    height: 72px;
+    display: inline-block;
+    float: left;
+    margin-left: -20px;
+}
+
+button.navbar-toggler{
+    border-color: transparent !important;
+    outline: none !important;
+}
+
+/* Header */
+#header-logo{
+    margin: 20px 30px !important;
+    margin-left: 65px !important;
+    a{
+        // padding: 10px 40px;
+        .img-logo{
+            width: 70px;
+            height: 70px;
+            border-radius: 7px;
+            float: left;
+        }
+        .container-text-logo{
+            // margin-left: -20px;
+            width: 63%;
+            float: right;
+            margin-top: 8px;
+            h1.text-church-name{
+                font-family: Roboto, 'sans-serif';
+                padding: 9px 0 0 0;
+                margin-left: -20px !important;
+                font-weight: 550 !important;
+                font-size: 20px;
+                line-height: 13px;
+                text-align: left;
+            }
+            .text-church-desc{
+                font-family: Roboto, 'sans-serif';
+                margin-left: -20px !important;
+                font-weight: 300;
+                font-size: 15px;
+                color: #999;
+                margin-top: -3px;
+                text-align: left;
+            }
+        }
+    }
+    i.icon-header-area{
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        // box-shadow: 0px 0px 0px $primary-color inset;
+        padding: 0.38em 0.48em;
+        font-size: 25px;
+        color: $primary-color;
+        margin-left: 20px;
+        margin-top: 10px;
+        font-weight: 600;
+        border: 1.8px solid $primary-color;
+        margin-left: 0px;
+        float: left;
+        &.icon-phone{
+            padding: 0.38em 0.35em !important;
+        }
+        &.icon-clock{
+            padding: 0.37em 0.36em !important;
+        }
+    }
+    
+    .container-section-logo{
+        &._worship{
+            margin-left: -85px;
+        }
+        &.phone{
+            width: 25% !important;
+        }
+    }
+    
+    .container-text-icon{
+        // margin-left: -20px;
+        width: 72%;
+        float: right;
+        margin-top: 8px;
+        &.phone{
+            width: 80%;
+        }
+        .text-icon-title{
+            font-family: Roboto, 'sans-serif';
+            padding: 9px 0 0 0;
+            margin-left: -20px !important;
+            font-weight: 550 !important;
+            font-size: 16px;
+            line-height: 13px;
+            text-align: left;
+            text-transform: capitalize;
+        }
+        .text-icon-desc{
+            font-family: Roboto, 'sans-serif';
+            margin-left: -20px !important;
+            font-weight: 300;
+            font-size: 15px;
+            color: #999;
+            margin-top: -3px;
+            text-align: left;
+        }
+    }
+    
+    i.icon-header-area:hover{
+        background: $primary-color !important;
+        color: #fff !important;
+        transition: all .5s ease;
+        cursor: pointer !important;
+    }
+}
+
+.swiper-pagination-bullet-active{
+    background: $primary-color !important;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+    // bottom: 0px !important;
+    background: #fff;
+    border-radius: 7px 7px 0 0;
+    padding: 2px 0 0 0;
+    bottom: 0px !important;
+}
+
+
+/* Navbar */
+.navbar-custom{
+    display: flex;
+    flex-grow: 1;
+    min-height: 67px !important;
+    justify-content: space-between;
+    max-width: 1140px;
+}
+
+.bg-navbar-custom{
+    background-image: url('https://www.gbiprj.org/img/green-dust-and-scratches.png'), -webkit-gradient(linear,0 0,100% 0,from($secondary-color),to($primary-color));
+    max-width: 100%;
+}
+
+.hidden-brand{
+    display: none !important;
+}
+
+.navbar-collapse{
+    display: flex;
+    width: 100%;
+    .navbar-nav{
+        .dropdown>.dropdown-toggle[aria-expanded=false]::before {
+            content: "\f0de";
+            font-family: "Font Awesome 5 Free";
+            font-size: 14px;
+            font-weight: 800 !important;
+        }
+        
+        .dropdown-church>.dropdown-toggle::before{
+            display: block;
+            font-weight: 700;
+            position: absolute;
+            right: 61px;
+            bottom: -23.45px;
+        }
+        
+        .dropdown-ministries>.dropdown-toggle::before{
+            display: block;
+            font-weight: 700;
+            position: absolute;
+            left: 64px;
+            bottom: -23.45px;
+        }
+        
+        .dropdown-community>.dropdown-toggle::before{
+            display: block;
+            font-weight: 700;
+            position: absolute;
+            left: 63px;
+            bottom: -23.45px;
+        }
+        
+        .dropdown-grow>.dropdown-toggle::before{
+            display: block;
+            font-weight: 700;
+            position: absolute;
+            right: 60px;
+            bottom: -23.45px;
+        }
+        
+        .dropdown-care>.dropdown-toggle::before{
+            display: block;
+            font-weight: 700;
+            position: absolute;
+            right: 64px;
+            bottom: -23.45px;
+        }
+        
+        .dropdown>.dropdown-toggle[aria-expanded=true]::before {
+            content: "\f0de";
+            font-family: "Font Awesome 5 Free";
+            font-size: 15px;
+        }
+        
+        .dropdown-menu{
+            margin-top: 9px;
+            .dropdown-item{
+                padding: 10px 20px;
+            }
+        }
+        
+        .dropdown-toggle::after{
+            display: none;
+        }
+        
+        .nav-link{
+            justify-content: space-arround !important;
+            color: #fff !important;
+            line-height: 27px;
+            // height: 72px;
+            padding: 20px;
+            width: 135px;
+            font-size: 17px;
+            text-align: center;
+        }
+    }
+}
+
+a.nav-link:hover{
+    background: rgba($color: #fff, $alpha: 0.3);
+}
+
+.dropdown:hover>.dropdown-menu{
+    display: block;
+    .dropdown-item:hover{
+        border-left: 2px solid #f1f2f7;
+    }
+}
+
+.nav_fixed{
+    position: fixed !important;
+    width: 100%;
+    z-index: 1500;
+    top: 0px;
+}
+
+@media (min-width: 300px) and (max-width:990px) {
+    .nav-link{
+        width: 135px;
+    }
+    .navbar-custom{
+        height: auto;
+    }
+    .hidden-brand{
+        visibility: hidden !important;
+        display: inline-block !important;
+    }
+}

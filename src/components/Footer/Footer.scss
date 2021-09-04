@@ -1,0 +1,89 @@
+@import '../../styles/variables';
+
+#footer-area{
+    background: linear-gradient(to right, #221c25 0, #221c25 50%, #251f28 50%, #251f28 100% );
+    color: #fff;
+    padding-top: 40px;
+    margin-top: -50px;
+}
+.container-footer-atas{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid #333;
+    a{
+        text-decoration: none;
+        img{
+            margin-left: 25px;
+            // margin-right: auto;
+            // margin: 0 auto;
+        }
+        .title-footer{
+            text-transform: uppercase;
+            font-size: 1.3em;
+            text-align: center;
+            margin-top: 10px;
+            color: #fff !important
+        }
+    }
+    .list-socmed{
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        margin-top: 30px !important;
+        margin-bottom: 30px !important;
+        li{
+            display: inline-block;
+            margin-right: 1.6rem;
+            font-size: 20px;
+            a{
+                border-radius: 3.125rem;
+                display: inline-block;
+                height: 3.125rem;
+                text-align: center;
+                text-decoration: none;
+                width: 3.125rem;
+                padding: 0;
+                color: white;
+                &.bg-youtube{
+                    background: #e74c3c;
+                }
+                &.bg-facebook{
+                    background: #3b5998;
+                }
+                &.bg-instagram{
+                    background: #c13584;
+                }
+                &.bg-email{
+                    background: #fff;
+                    color: #1b1b1b !important;
+                }
+                i{
+                    font-size: 1.125rem;
+                    line-height: 3.125rem;
+                }
+            }
+        }
+        li:hover{
+            animation: icon_sosmed_animation 2s infinite;
+            animation-timing-function: linear;
+            transition: all .5s ease;
+        }
+    }
+}
+
+@keyframes icon_sosmed_animation{
+	0%   { position: relative; top:0px}
+	// 25%  { position: relative; top:-5px;}
+	50% { position: relative; top:-5px;}
+	// 75% { position: relative; top:-5px;}
+	100% { position: relative; top:0px;}
+}
+.container-footer-bawah{
+    padding: 20px 0;
+    span.prod-copyright{
+        text-transform: uppercase !important;
+    }
+}

@@ -1,0 +1,142 @@
+.btn-back{
+    background: #ea2027 !important;
+    padding: 11px 18px;
+    border-radius: 7px;
+    height: 46px;
+    width: 46px;
+    i{
+        color: white;
+    }
+}
+.container-content{
+    
+    &-pastor{
+        margin: 0px 62px;
+        padding: 50px 0px;
+        .pastorName{
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #ddd;
+            font-size: 24px;
+            font-weight: 500 !important;
+            line-height: 28.8px;
+        }
+        .isi-content-pastors{
+            font-size: 17px !important;
+            text-align: justify;
+            margin-bottom: 20px;
+            transition: all 0s ease 0s;
+            line-height: 30px;
+            ul{
+                margin-left: -15px;
+                margin-top: -10px;
+                li{
+                    line-height: 30px !important;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    
+    &-gatsu{
+        margin: 0px 62px;
+        padding: 50px 0px;
+        .title-content{
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #ddd;
+            font-size: 24px;
+            font-weight: 500 !important;
+            line-height: 28.8px;
+            text-transform: uppercase;
+        }
+        .isi-content{
+            font-size: 17px !important;
+            text-align: justify;
+            margin-bottom: 20px;
+            transition: all 0s ease 0s;
+            line-height: 30px;
+            ul{
+                margin-left: -15px;
+                margin-top: -10px;
+                li{
+                    line-height: 30px !important;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    
+    &-history{
+        margin: 0px 62px;
+        padding: 50px 0px;
+        .title-content{
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #ddd;
+            font-size: 24px;
+            font-weight: 600 !important;
+            line-height: 28.8px;
+            text-transform: uppercase;
+        }
+        .isi-content{
+            font-size: 17px !important;
+            text-align: justify;
+            margin-bottom: 20px;
+            transition: all 0s ease 0s;
+            line-height: 30px;
+        }
+        &-subcontent{
+            width: 100%;
+            padding: 15px;
+        }
+    }
+    
+    &-ck7-group{
+        margin: 0px 62px;
+        padding: 50px 0px;
+        .church-name{
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #ddd;
+            font-size: 24px;
+            font-weight: 550 !important;
+            line-height: 28.8px;
+            text-transform: uppercase;
+        }
+        .isi-content{
+            font-size: 17px !important;
+            text-align: justify;
+            margin-bottom: 20px;
+            transition: all 0s ease 0s;
+            line-height: 30px;
+            ul{
+                margin-left: -15px;
+                margin-top: -10px;
+                li{
+                    line-height: 30px !important;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+.bg-img-line-bottom{
+    background-image: url(https://www.gbiprj.org/img/bg-pattern-bottom.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 400px;
+}
+
+#footer-area{
+    margin-top: -75px;
+}

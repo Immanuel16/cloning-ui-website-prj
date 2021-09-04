@@ -1,0 +1,96 @@
+@import '../../../styles/variables';
+
+
+#container-card-sermon-custom{
+    visibility: visible;
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    margin: 15px;
+    box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.09);
+    border-radius: 7px 40px;
+    a{
+        padding: 30px 30px 20px 20px;
+        color: #000;
+        text-decoration: none;
+        display: inline-flex;
+        background-image: url(https://www.gbiprj.org/img/green-dust-and-scratches.png);
+        :hover{
+            transform: perspective(1px) translateZ(0);
+        }
+        figure{
+            width: 100px;
+            height: 100px;
+            float: left;
+            // text-align: center;
+            margin: 20px;
+            margin-right: 0px;
+            img {
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                box-shadow: 0 8px 7px #ccc;
+            }
+        }
+        
+        .detail-sermon {
+            // display: inline-block;
+            font-family: Roboto, 'sans-serif';
+            text-align: left;
+            margin: 20px;
+            margin-left: 0px;
+            padding-left: 28px;
+            .title-card {
+                display: block;
+                width: 100%;
+                // white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-bottom: 17px;
+                font-size: 24px;
+            }
+            .label-ibadah {
+                color: #fff;
+                background: #9c1383;
+                padding: 3px 12px;
+                border-radius: 20px;
+                display: inline-block;
+                margin: 0px 8px 8px 0;
+                
+            }
+            .section-info-sermon{
+                font-size: 17px;
+                i{
+                    color: $primary-color;
+                    // margin-right: 15px;
+                }
+                em{
+                    color: #212529;
+                    padding-left: 15px;
+                }
+            }
+            .ringkasan-khotbah{
+                margin-top: 15px;
+                color: #212529;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+@keyframes card_animation{
+    0%   { position: relative; top:0px}
+    50%  { position: relative; top:10px;}
+    100% { position: relative; top:0px;}
+}
+#container-card-sermon-custom:hover{
+    border-bottom: 5px solid $primary-color;
+    animation: card_animation 2s infinite;
+    // box-shadow: 0 0 30px rgb(0 0 0 / 9%);
+    box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.09);
+    border-radius: 7px 40px;
+    img{
+        transform: rotate(10deg);
+        transition: all 1s ease-in;
+    }
+}
+

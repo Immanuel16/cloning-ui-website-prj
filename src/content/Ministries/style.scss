@@ -1,0 +1,110 @@
+@import '../../styles/variables';
+
+#container-card-ibadah{
+    margin: 0px 35px;
+    padding: 20px 0px;
+    .btn-back{
+        background: #ea2027 !important;
+        display: inline-block;
+        padding: 12px 15px;
+        border-radius: 7px;
+        height: 46px;
+        width: 46px;
+        i{
+            color: white;
+        }
+        margin-right: 20px;
+    }
+    
+    .btn-jadwal{
+        background: #34495e !important;
+        display: inline-block;
+        padding: 12px 15px;
+        border-radius: 7px;
+        height: 46px;
+        width: 46px;
+        i{
+            color: white;
+        }
+    }
+    width: 95%;
+    
+    &-umum{
+        visibility: visible;
+        opacity: 1;
+        margin: 15px;
+        box-shadow: 0 0  30px rgba($color: #000000, $alpha: 0.09);
+        border-radius: 7px 40px;
+        padding: 20px;
+        width: 100%;
+        background-image: url(https://www.gbiprj.org/img/green-dust-and-scratches.png);
+        
+        .title-ibadah{
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 30px;
+        }
+        
+        .isi-content{
+            font-size: 17px;
+            line-height: 30px;
+            span{
+                padding-right: 10px;
+                color: $primary-color;
+            }
+        }
+    }
+    
+    &-umum:hover{
+        border-bottom: 5px solid $primary-color;
+        animation: card_animation 2s infinite;
+        // box-shadow: 0 0 30px rgb(0 0 0 / 9%);
+        box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.09);
+        border-radius: 7px 40px;
+    }
+    
+    &-bpa, &-khusus{
+        margin-bottom: 20px;
+        height: 100% !important;
+        .card-img-top{
+            width:85%;
+            box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.09);
+            display: flex;
+            margin: 15px 20px; 
+            padding: 10px 10px;
+            justify-content: center;
+        }
+        .card-body{
+            box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.09);
+            .title-ibadah{
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 30px;
+                padding-bottom: 10px;
+                border-bottom: 1px dashed #ddd;
+            }
+            
+            .description-ibadah{
+                font-size: 17px;
+                line-height: 30px;
+            }
+            
+            .btn-more-info{
+                color: #fff;
+                background: $primary-color;
+                width: 100%;
+                text-align: center;
+                border-radius: 7px;
+            }
+            
+        }
+        
+    }
+}
+
+
+@keyframes card_animation{
+    0%   { position: relative; top:0px}
+    50%  { position: relative; top:10px;}
+    100% { position: relative; top:0px;}
+}
