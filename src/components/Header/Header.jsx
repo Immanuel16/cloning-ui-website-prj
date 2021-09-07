@@ -4,11 +4,8 @@ import './Header.scss'
 import 'swiper/swiper.min.css'
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/effect-coverflow/effect-coverflow.scss";
-import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, EffectCoverflow } from 'swiper';
 import 'swiper/swiper-bundle.css'
-import $ from 'jquery';
-import { NavLink } from 'react-router-dom';
 
 SwiperCore.use([Pagination, EffectCoverflow]);
 
@@ -84,45 +81,52 @@ export default class Header extends React.Component {
                 {/* <div className="top-area">
                     <a href><span className="live">Live Streaming,</span><span className="time-live">15 Agustus 2021</span></a>
                 </div> */}
-                <div className="row" id="header-logo">
-                    <div className="col-md-3 container-section-logo">
-                        <a>
-                            <img src="https://www.gbiprj.org/img/logo.jpg" className="img-logo" />
-                            <div className="container-text-logo">
-                                <h1 className="text-church-name">GBI PRJ CK7</h1>
-                                <p className="text-church-desc">Praise Revival for Jesus</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div className="col-md-3 container-section-logo">
+                
+                <div className="container-logo-top">
+                    {/* Logo Section */}
+                    <a className="logo-prj">
+                        <img src="https://www.gbiprj.org/img/logo.jpg" className="img-logo" />
+                        <div className="container-text-logo">
+                            <p className="text-church-name">GBI PRJ CK7</p>
+                            <p className="text-church-desc">Praise Revival for Jesus</p>
+                            
+                        </div>
+                    </a>
+                    {/* End of Logo */}
+                    
+                    {/* Location Section */}
+                    <div className="section-icon-top">
                         <i className="fas fa-map-marker-alt icon-header-area"></i>
                         <div className="container-text-icon">
                             <h6 className="text-icon-title">integrity convention centre</h6>
                             <p className="text-icon-desc">Mall MGK Lt.9</p>
                         </div>
                     </div>
-
-                    <div className="col-md-3 container-section-logo phone">
-                        <div className="divider-icon">
-                        </div>
+                    {/* End of Location */}
+                    
+                    {/* Phone Section */}
+                    
+                    <div className="section-icon-top contact">
                         <i className="fas fa-phone icon-header-area icon-phone"></i>
                         <div className="container-text-icon">
                             <h6 className="text-icon-title">contact</h6>
                             <p className="text-icon-desc"><span className="mr-2">021</span> <span className="mr-2">2605</span> 1888</p>
                         </div>
                     </div>
-
-                    <div className="col-md-3 container-section-logo _worship">
-                        <div className="divider-icon">
-                        </div>
+                    {/* End of Phone Section */}
+                    
+                    {/* Ministry Time Section */}
+                    <div className="section-icon-top time-ministries">
                         <i className="fas fa-clock icon-header-area icon-clock"></i>
                         <div className="container-text-icon">
                             <h6 className="text-icon-title">worship service</h6>
                             <p className="text-icon-desc">07.00 - 16.30 WIB</p>
                         </div>
                     </div>
+                    {/* End of Ministry Time Section */}
                 </div>
+                
+                
                 <Navbar collapseOnSelect expand="lg" className={`bg-navbar-custom text-white ${this.state.nav && 'nav_fixed'} `} >
                     <Container className="navbar-custom">
                         <Navbar.Brand href="#home" className="hidden-brand">React-Bootstrap</Navbar.Brand>

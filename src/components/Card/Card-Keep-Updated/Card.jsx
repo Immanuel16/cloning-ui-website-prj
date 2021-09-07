@@ -1,6 +1,4 @@
-import { Card, CardContent } from '@material-ui/core';
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
 import './Card.scss'
 
 export default class CardComponent extends React.Component{

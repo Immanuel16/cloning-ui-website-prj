@@ -1,7 +1,6 @@
 import Aos from 'aos';
 import "aos/dist/aos.css";
 import React, { Component } from 'react';
-import { Col, Row } from 'react-bootstrap';
 import './Card.scss';
 
 
@@ -15,7 +14,7 @@ export default class CardSermon extends Component {
     }
 
     render() {
-        const { labelIbadah, srcImgPastor, titleCardName, md, lg, sm, pastorName, timeSermon, ringkasanKhotbah, readMore } = this.props;
+        const { labelIbadah, srcImgPastor, titleCardName, pastorName, timeSermon, ringkasanKhotbah, readMore } = this.props;
         return (
             <div id="container-card-sermon-custom" className="h-100">
                 <a href="">

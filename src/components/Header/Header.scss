@@ -18,51 +18,96 @@
     }
 }
 
-.divider-icon{
-    // background: #f1f2f7;
-    width: 0.1px !important;
-    border: 0.5px dashed #e8ecec;
-    opacity: 0.6;
-    height: 72px;
-    display: inline-block;
-    float: left;
-    margin-left: -20px;
-}
-
-button.navbar-toggler{
-    border-color: transparent !important;
-    outline: none !important;
-}
-
-/* Header */
-#header-logo{
-    margin: 20px 30px !important;
-    margin-left: 65px !important;
-    a{
-        // padding: 10px 40px;
+.container-logo-top{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    padding: 0.5em 4em;
+    gap:20px;
+    .logo-prj{
+        display: grid;
+        text-decoration: none;
+        color: #000;
+        grid-template-columns: 42% auto;
+        padding: 10px;
         .img-logo{
             width: 70px;
             height: 70px;
             border-radius: 7px;
-            float: left;
+            margin-left: 30px;
         }
-        .container-text-logo{
-            // margin-left: -20px;
-            width: 63%;
-            float: right;
-            margin-top: 8px;
-            h1.text-church-name{
-                font-family: Roboto, 'sans-serif';
+        .text-church-name{
+            // font-family: Roboto, 'sans-serif';
+            padding: 15px 0 0 0;
+            margin-left: -20px !important;
+            font-weight: 530 !important;
+            font-size: 20px;
+            line-height: 13px;
+        }
+        .text-church-desc{
+            // font-family: Roboto, 'sans-serif';
+            margin-left: -20px !important;
+            font-weight: 300;
+            font-size: 15px;
+            color: #999;
+            margin-top: -6px;
+        }
+    }
+    
+    .section-icon-top{
+        display: grid;
+        text-decoration: none;
+        color: #000;
+        grid-template-columns: 18% auto;
+        padding: 10px;
+        padding-top: 1.5em;
+        border-right: 1px dashed #ddd;
+        height: 75%;
+        &.contact{
+            grid-template-columns: 27% auto;
+            // padding: 10px 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            height:75%;
+        }
+        &.time-ministries{
+            grid-template-columns: 23% auto;
+            border-right: 0px;
+        }
+        .icon-header-area{
+            border-radius: 50%;
+            width: 46px;
+            height: 46px;
+            padding: 0.38em 0.48em;
+            font-size: 25px;
+            color: $primary-color;
+            margin-left: 20px;
+            font-weight: 600;
+            border: 2px solid $primary-color;
+            margin-left: 0px;
+            &:hover{
+                background: $primary-color !important;
+                color: #fff !important;
+                transition: all .5s ease;
+                cursor: pointer !important;
+            }
+            &.icon-phone{
+                padding: 0.38em 0.35em !important;
+            }
+            &.icon-clock{
+                padding: 0.37em 0.36em !important;
+            }
+        }
+        .container-text-icon{
+            margin-top: -3px;
+            .text-icon-title{
                 padding: 9px 0 0 0;
-                margin-left: -20px !important;
                 font-weight: 550 !important;
-                font-size: 20px;
+                font-size: 16px;
                 line-height: 13px;
                 text-align: left;
+                text-transform: capitalize;
             }
-            .text-church-desc{
-                font-family: Roboto, 'sans-serif';
-                margin-left: -20px !important;
+            .text-icon-desc{
                 font-weight: 300;
                 font-size: 15px;
                 color: #999;
@@ -71,71 +116,26 @@ button.navbar-toggler{
             }
         }
     }
-    i.icon-header-area{
-        border-radius: 50%;
-        width: 46px;
-        height: 46px;
-        // box-shadow: 0px 0px 0px $primary-color inset;
-        padding: 0.38em 0.48em;
-        font-size: 25px;
-        color: $primary-color;
-        margin-left: 20px;
-        margin-top: 10px;
-        font-weight: 600;
-        border: 1.8px solid $primary-color;
-        margin-left: 0px;
-        float: left;
-        &.icon-phone{
-            padding: 0.38em 0.35em !important;
-        }
-        &.icon-clock{
-            padding: 0.37em 0.36em !important;
-        }
+}
+
+.divider-icon{
+    height: 70px;
+    position: relative;
+    border-left: 1px dashed #e8ecec;
+    top: 20px;
+    &::after{
+        content: "";
+        position: absolute;
+        height: 50%;
     }
-    
-    .container-section-logo{
-        &._worship{
-            margin-left: -85px;
-        }
-        &.phone{
-            width: 25% !important;
-        }
-    }
-    
-    .container-text-icon{
-        // margin-left: -20px;
-        width: 72%;
-        float: right;
-        margin-top: 8px;
-        &.phone{
-            width: 80%;
-        }
-        .text-icon-title{
-            font-family: Roboto, 'sans-serif';
-            padding: 9px 0 0 0;
-            margin-left: -20px !important;
-            font-weight: 550 !important;
-            font-size: 16px;
-            line-height: 13px;
-            text-align: left;
-            text-transform: capitalize;
-        }
-        .text-icon-desc{
-            font-family: Roboto, 'sans-serif';
-            margin-left: -20px !important;
-            font-weight: 300;
-            font-size: 15px;
-            color: #999;
-            margin-top: -3px;
-            text-align: left;
-        }
-    }
-    
-    i.icon-header-area:hover{
-        background: $primary-color !important;
-        color: #fff !important;
-        transition: all .5s ease;
-        cursor: pointer !important;
+}
+
+button.navbar-toggler{
+    border-color: transparent !important;
+    outline: none !important;
+    // margin-right: -50px;
+    &:focus{
+        box-shadow: 0 0 0 0;
     }
 }
 
@@ -174,6 +174,7 @@ button.navbar-toggler{
     display: flex;
     width: 100%;
     .navbar-nav{
+        justify-content: space-between;
         .dropdown>.dropdown-toggle[aria-expanded=false]::before {
             content: "\f0de";
             font-family: "Font Awesome 5 Free";
@@ -186,7 +187,7 @@ button.navbar-toggler{
             font-weight: 700;
             position: absolute;
             right: 61px;
-            bottom: -23.45px;
+            bottom: -22.5px;
         }
         
         .dropdown-ministries>.dropdown-toggle::before{
@@ -194,7 +195,7 @@ button.navbar-toggler{
             font-weight: 700;
             position: absolute;
             left: 64px;
-            bottom: -23.45px;
+            bottom: -22.5px;
         }
         
         .dropdown-community>.dropdown-toggle::before{
@@ -202,7 +203,7 @@ button.navbar-toggler{
             font-weight: 700;
             position: absolute;
             left: 63px;
-            bottom: -23.45px;
+            bottom: -22.5px;
         }
         
         .dropdown-grow>.dropdown-toggle::before{
@@ -210,7 +211,7 @@ button.navbar-toggler{
             font-weight: 700;
             position: absolute;
             right: 60px;
-            bottom: -23.45px;
+            bottom: -22.5px;
         }
         
         .dropdown-care>.dropdown-toggle::before{
@@ -218,7 +219,7 @@ button.navbar-toggler{
             font-weight: 700;
             position: absolute;
             right: 64px;
-            bottom: -23.45px;
+            bottom: -22.5px;
         }
         
         .dropdown>.dropdown-toggle[aria-expanded=true]::before {
@@ -239,12 +240,12 @@ button.navbar-toggler{
         }
         
         .nav-link{
-            justify-content: space-arround !important;
+            justify-content: space-around !important;
             color: #fff !important;
             line-height: 27px;
             // height: 72px;
             padding: 20px;
-            width: 135px;
+            width: 150px;
             font-size: 17px;
             text-align: center;
         }
@@ -269,15 +270,554 @@ a.nav-link:hover{
     top: 0px;
 }
 
-@media (min-width: 300px) and (max-width:990px) {
+
+/* media query navbar */
+@media (min-width: 992px) and (max-width: 1125px){
     .nav-link{
-        width: 135px;
+        width: 115px !important;
+        justify-content: space-between !important;
     }
     .navbar-custom{
         height: auto;
     }
     .hidden-brand{
         visibility: hidden !important;
+        display: none !important;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 991px){
+    .nav-link{
+        width: 100% !important;
+        justify-content: space-between !important;
+        text-align: left !important;
+        padding: 10px !important;
+    }
+    .navbar-custom{
+        
+    }
+    .hidden-brand{
+        visibility: hidden !important;
         display: inline-block !important;
+    }
+    
+    .navbar-toggler{
+        position: absolute;
+        right: 2%;
+        top: 20px;
+    }
+    
+    .navbar-collapse{
+        margin: 0 !important;
+        margin-left: -10px !important;
+        .navbar-nav{
+            width: 100% !important;
+            .dropdown>.dropdown-toggle[aria-expanded=false]::before {
+                content: "\f054";
+                font-family: "Font Awesome 5 Free";
+                font-size: 12px;
+                font-weight: 800 !important;
+            }
+            
+            .dropdown-church>.dropdown-toggle::before{
+                display: inline-block;
+                font-weight: 700;
+                position: absolute;
+                left: 94.3%;
+                top: 11px;
+            }
+            
+            .dropdown-ministries>.dropdown-toggle::before{
+                display: inline-block;
+                font-weight: 700;
+                position: absolute;
+                left: 94.3%;
+                top: 11px;
+            }
+            
+            .dropdown-community>.dropdown-toggle::before{
+                display: inline-block;
+                font-weight: 700;
+                position: absolute;
+                left: 94.3%;
+                top: 11px;
+            }
+            
+            .dropdown-grow>.dropdown-toggle::before{
+                display: inline-block;
+                font-weight: 700;
+                position: absolute;
+                left: 94.3%;
+                top: 11px;
+            }
+            
+            .dropdown-care>.dropdown-toggle::before{
+                display: inline-block;
+                font-weight: 700;
+                position: absolute;
+                left: 94.3%;
+                top: 11px;
+            }
+            
+            .dropdown>.dropdown-toggle[aria-expanded=true]::before {
+                content: "\f078";
+                font-family: "Font Awesome 5 Free";
+                font-size: 15px;
+            }
+            
+            .dropdown-menu{
+                margin-top: 9px;
+                .dropdown-item{
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+    
+}
+
+
+@media (min-width: 641px) and (max-width: 991px){
+    .navbar-collapse{
+        margin-left: -50px !important;
+    }
+    .navbar-toggler{
+        position: absolute;
+        right: 8.75%;
+        top: 20px;
+    }
+    
+    .navbar-nav{
+        width: 100% !important;
+        .dropdown>.dropdown-toggle[aria-expanded=false]::before {
+            content: "\f054";
+            font-family: "Font Awesome 5 Free";
+            font-size: 12px;
+            font-weight: 800 !important;
+        }
+        
+        .dropdown-church>.dropdown-toggle::before{
+            display: inline-block;
+            font-weight: 700;
+            position: absolute;
+            left: 100%;
+            top: 11px;
+        }
+        
+        .dropdown-ministries>.dropdown-toggle::before{
+            display: inline-block;
+            font-weight: 700;
+            position: absolute;
+            left: 100%;
+            top: 11px;
+        }
+        
+        .dropdown-community>.dropdown-toggle::before{
+            display: inline-block;
+            font-weight: 700;
+            position: absolute;
+            left: 100%;
+            top: 11px;
+        }
+        
+        .dropdown-grow>.dropdown-toggle::before{
+            display: inline-block;
+            font-weight: 700;
+            position: absolute;
+            left: 100%;
+            top: 11px;
+        }
+        
+        .dropdown-care>.dropdown-toggle::before{
+            display: inline-block;
+            font-weight: 700;
+            position: absolute;
+            left: 100%;
+            top: 11px;
+        }
+        
+        .dropdown>.dropdown-toggle[aria-expanded=true]::before {
+            content: "\f078";
+            font-family: "Font Awesome 5 Free";
+            font-size: 15px;
+        }
+        
+        .dropdown-menu{
+            margin-top: 9px;
+            .dropdown-item{
+                padding: 10px 20px;
+            }
+        }
+    }
+}
+/* end of media query navbar */
+
+
+
+@media (min-width: 845px) and (max-width:1125px) {
+    .container-logo-top{
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 100%;
+        // justify-items: center;
+        // align-items: center;
+        padding: 0.5em 0.5em;
+        gap: 0px;
+        padding-top: 30px;
+        .logo-prj{
+            grid-template-rows: repeat(2, auto);
+            grid-template-columns: 100%;
+            padding: 10px;
+            justify-items: center;
+            .img-logo{
+                margin-left: 0px;
+            }
+            .container-text-logo{
+                text-align: center;
+                .text-church-name{
+                    margin-left: 0px !important;
+                }
+                .text-church-desc{
+                    margin-left: -5px !important;
+                }
+            }
+        }
+        
+        .section-icon-top{
+            display: grid;
+            text-decoration: none;
+            color: #000;
+            grid-template-columns: 17% auto;
+            // grid-template-columns: 100%;
+            margin: 0px 30% 0px 34%;
+            border-right: 0px;
+            height: 75%;
+            gap: 0px;
+            padding-top: 0em;
+            &.contact{
+                grid-template-columns: 17% auto;
+                margin-top: -10px;
+            }
+            &.time-ministries{
+                grid-template-columns: 17% auto;
+                margin-top: -10px;
+            }
+            .icon-header-area{
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                padding: 0.38em 0.56em;
+                font-size: 20px;
+                color: $primary-color;
+                margin-left: 20px;
+                font-weight: 600;
+                border: 2px solid $primary-color;
+                margin-left: 0px;
+                &:hover{
+                    background: $primary-color !important;
+                    color: #fff !important;
+                    transition: all .5s ease;
+                    cursor: pointer !important;
+                }
+                &.icon-phone{
+                    padding: 0.38em 0.46em !important;
+                }
+                &.icon-clock{
+                    padding: 0.40em 0.46em !important;
+                }
+            }
+            .container-text-icon{
+                margin-top: -3px;
+                width: 100%;
+                .text-icon-title{
+                    padding: 9px 0 0 0;
+                    font-weight: 550 !important;
+                    font-size: 16px;
+                    line-height: 13px;
+                    text-transform: capitalize;
+                }
+                .text-icon-desc{
+                    font-weight: 300;
+                    font-size: 15px;
+                    color: #999;
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 720px) and (max-width:844px){
+    .container-logo-top{
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 100%;
+        // justify-items: center;
+        // align-items: center;
+        padding: 0.5em 0.5em;
+        gap: 0px;
+        padding-top: 30px;
+        .logo-prj{
+            grid-template-rows: repeat(2, auto);
+            grid-template-columns: 100%;
+            padding: 10px;
+            justify-items: center;
+            .img-logo{
+                margin-left: 0px;
+            }
+            .container-text-logo{
+                text-align: center;
+                .text-church-name{
+                    margin-left: 0px !important;
+                }
+                .text-church-desc{
+                    margin-left: -5px !important;
+                }
+            }
+        }
+        
+        .section-icon-top{
+            display: grid;
+            text-decoration: none;
+            color: #000;
+            grid-template-columns: 20% auto;
+            // grid-template-columns: 100%;
+            margin: 0px 30% 0px 34%;
+            border-right: 0px;
+            height: 75%;
+            gap: 0px;
+            padding-top: 0em;
+            &.contact{
+                grid-template-columns: 20% auto;
+                margin-top: -10px;
+            }
+            &.time-ministries{
+                grid-template-columns: 20% auto;
+                margin-top: -10px;
+            }
+            .icon-header-area{
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                padding: 0.38em 0.56em;
+                font-size: 20px;
+                color: $primary-color;
+                margin-left: 20px;
+                font-weight: 600;
+                border: 2px solid $primary-color;
+                margin-left: 0px;
+                &:hover{
+                    background: $primary-color !important;
+                    color: #fff !important;
+                    transition: all .5s ease;
+                    cursor: pointer !important;
+                }
+                &.icon-phone{
+                    padding: 0.38em 0.46em !important;
+                }
+                &.icon-clock{
+                    padding: 0.40em 0.46em !important;
+                }
+            }
+            .container-text-icon{
+                margin-top: -3px;
+                width: 100%;
+                .text-icon-title{
+                    padding: 9px 0 0 0;
+                    font-weight: 550 !important;
+                    font-size: 15px;
+                    line-height: 13px;
+                    text-transform: capitalize;
+                }
+                .text-icon-desc{
+                    font-weight: 300;
+                    font-size: 14px;
+                    color: #999;
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 500px) and (max-width:720px){
+    .container-logo-top{
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 100%;
+        // justify-items: center;
+        // align-items: center;
+        padding: 0.5em 0.5em;
+        gap: 0px;
+        padding-top: 30px;
+        .logo-prj{
+            grid-template-rows: repeat(2, auto);
+            grid-template-columns: 100%;
+            padding: 10px;
+            justify-items: center;
+            .img-logo{
+                margin-left: 0px;
+            }
+            .container-text-logo{
+                text-align: center;
+                .text-church-name{
+                    margin-left: 0px !important;
+                }
+                .text-church-desc{
+                    margin-left: -5px !important;
+                }
+            }
+        }
+        
+        .section-icon-top{
+            display: grid;
+            text-decoration: none;
+            color: #000;
+            grid-template-columns: 20% auto;
+            // grid-template-columns: 100%;
+            margin: 0px 22% 0px 24%;
+            border-right: 0px;
+            height: 75%;
+            gap: 0px;
+            padding-top: 0em;
+            &.contact{
+                grid-template-columns: 20% auto;
+                margin-top: -10px;
+            }
+            &.time-ministries{
+                grid-template-columns: 20% auto;
+                margin-top: -10px;
+            }
+            .icon-header-area{
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                padding: 0.38em 0.56em;
+                font-size: 20px;
+                color: $primary-color;
+                margin-left: 20px;
+                font-weight: 600;
+                border: 2px solid $primary-color;
+                margin-left: 0px;
+                &:hover{
+                    background: $primary-color !important;
+                    color: #fff !important;
+                    transition: all .5s ease;
+                    cursor: pointer !important;
+                }
+                &.icon-phone{
+                    padding: 0.38em 0.46em !important;
+                }
+                &.icon-clock{
+                    padding: 0.40em 0.46em !important;
+                }
+            }
+            .container-text-icon{
+                margin-top: -3px;
+                width: 100%;
+                .text-icon-title{
+                    padding: 9px 0 0 0;
+                    font-weight: 550 !important;
+                    font-size: 15px;
+                    line-height: 13px;
+                    text-transform: capitalize;
+                }
+                .text-icon-desc{
+                    font-weight: 300;
+                    font-size: 14px;
+                    color: #999;
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 300px) and (max-width:499px){
+    .container-logo-top{
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 100%;
+        // justify-items: center;
+        // align-items: center;
+        padding: 0.5em 0.5em;
+        gap: 0px;
+        padding-top: 30px;
+        .logo-prj{
+            grid-template-rows: repeat(2, auto);
+            grid-template-columns: 100%;
+            padding: 10px;
+            justify-items: center;
+            .img-logo{
+                margin-left: 0px;
+            }
+            .container-text-logo{
+                text-align: center;
+                .text-church-name{
+                    margin-left: 0px !important;
+                }
+                .text-church-desc{
+                    margin-left: -5px !important;
+                }
+            }
+        }
+        
+        .section-icon-top{
+            display: grid;
+            text-decoration: none;
+            color: #000;
+            grid-template-columns: 30% auto;
+            // grid-template-columns: 100%;
+            margin: 0px 22% 0px 24%;
+            border-right: 0px;
+            height: 75%;
+            gap: 0px;
+            padding-top: 0em;
+            &.contact{
+                grid-template-columns: 30% auto;
+                margin-top: -10px;
+            }
+            &.time-ministries{
+                grid-template-columns: 30% auto;
+                margin-top: -10px;
+            }
+            .icon-header-area{
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                padding: 0.38em 0.56em;
+                font-size: 20px;
+                color: $primary-color;
+                margin-left: 20px;
+                font-weight: 600;
+                border: 2px solid $primary-color;
+                margin-left: 0px;
+                &:hover{
+                    background: $primary-color !important;
+                    color: #fff !important;
+                    transition: all .5s ease;
+                    cursor: pointer !important;
+                }
+                &.icon-phone{
+                    padding: 0.38em 0.46em !important;
+                }
+                &.icon-clock{
+                    padding: 0.40em 0.46em !important;
+                }
+            }
+            .container-text-icon{
+                margin-top: -3px;
+                width: 100%;
+                .text-icon-title{
+                    padding: 9px 0 0 0;
+                    font-weight: 550 !important;
+                    font-size: 15px;
+                    line-height: 13px;
+                    text-transform: capitalize;
+                }
+                .text-icon-desc{
+                    font-weight: 300;
+                    font-size: 14px;
+                    color: #999;
+                    margin-top: -3px;
+                }
+            }
+        }
     }
 }

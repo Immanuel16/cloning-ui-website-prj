@@ -2,15 +2,7 @@ import React from 'react';
 // import { Row, Col, Form } from 'react-bootstrap';
 import './Card.scss';
 import {
-    Alert,
-    Button,
-    Card,
-    CardBody,
-    CardHeader,
-    CardFooter,
     Col,
-    FormGroup,
-    FormFeedback,
     Input,
     Label,
     Row
@@ -44,7 +36,7 @@ export default class CardContactUs extends React.Component {
     }
 
     render() {
-        const { titleCard, address, labelName, labelAddress, labelPhoneNum, labelEmail, labelMessages } = this.props;
+        const { address, labelName, labelAddress, labelPhoneNum, labelEmail, labelMessages } = this.props;
         return (
             <div className={`flex-center-cwh ${this.state.card && 'zIndexTop' }`} id="container-card-contact-us">
                 <h2 style={{ textTransform: "uppercase", fontSize: "2em", padding: "0px 15px", marginTop: "35px" }}>contact <b>us</b> </h2>
