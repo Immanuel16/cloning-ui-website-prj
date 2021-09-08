@@ -297,7 +297,7 @@ export default class Layout extends React.Component {
                         <Col
                             md={6}
                             lg={6}
-                            sm={6}
+                            sm={12}
                         >
                             <CardSermon
                                 srcImgPastor="https://home.gbiprj.org/img/photos/pembicara/4995317869151410.jpg"
@@ -313,7 +313,7 @@ export default class Layout extends React.Component {
                         <Col
                             md={6}
                             lg={6}
-                            sm={6}
+                            sm={12}
                         >
                             <CardSermon
                                 srcImgPastor="https://home.gbiprj.org/img/photos/pembicara/7549947490.jpg"
@@ -331,7 +331,7 @@ export default class Layout extends React.Component {
                         <Col
                             md={6}
                             lg={6}
-                            sm={6}
+                            sm={12}
                         >
                             <CardSermon
                                 srcImgPastor="https://home.gbiprj.org/img/photos/pembicara/9541834371105803.jpg"
@@ -347,7 +347,7 @@ export default class Layout extends React.Component {
                         <Col
                             md={6}
                             lg={6}
-                            sm={6}
+                            sm={12}
                         >
                             <CardSermon
                                 srcImgPastor="https://home.gbiprj.org/img/photos/pembicara/1679278742111141.jpg"
@@ -379,12 +379,14 @@ export default class Layout extends React.Component {
                                 <span className="simple-word">
                                     Bagi Bapak / Ibu yang membutuhkan Ringkasan Khotbah Ibadah Raya I s/d V, 2PM Service, Kebaktian Tengah Minggu, Women Of Integrity maupun Doa Fajar via Whatsapp atau Email
                                 </span>
-                                <a href="https://api.whatsapp.com/send?phone=6287723005577&text=Shalom%2C%20Saya%20membutuhkan%20ringkasan%20khotbah%20GBI%20-%20PRJ.%20Terima%20kasih" className="btn btn-custom link-whatsapp">
-                                    <i className="fab fa-whatsapp"></i> Whatsapp
-                                </a>
-                                <a href="mailto:multimedia.gbiprj@gmail.com?subject=Request%20Ringkasan%20Khotbah&body=Shalom%2C%20Saya%20membutuhkan%20ringkasan%20khotbah%20GBI%20-%20PRJ.%20Terima%20kasih" className="btn btn-custom link-email">
-                                    <i className="far fa-envelope"></i> Email
-                                </a>
+                                <div className="container-button">
+                                    <a href="https://api.whatsapp.com/send?phone=6287723005577&text=Shalom%2C%20Saya%20membutuhkan%20ringkasan%20khotbah%20GBI%20-%20PRJ.%20Terima%20kasih" className="btn btn-custom link-whatsapp">
+                                        <i className="fab fa-whatsapp"></i> Whatsapp
+                                    </a>
+                                    <a href="mailto:multimedia.gbiprj@gmail.com?subject=Request%20Ringkasan%20Khotbah&body=Shalom%2C%20Saya%20membutuhkan%20ringkasan%20khotbah%20GBI%20-%20PRJ.%20Terima%20kasih" className="btn btn-custom link-email">
+                                        <span><i className="far fa-envelope" style={{ paddingTop: "2px" }}></i> Email</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

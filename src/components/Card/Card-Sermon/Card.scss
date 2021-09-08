@@ -12,16 +12,23 @@
         padding: 30px 30px 20px 20px;
         color: #000;
         text-decoration: none;
-        display: inline-flex;
+        // display: inline-flex;
         background-image: url(https://www.gbiprj.org/img/green-dust-and-scratches.png);
         :hover{
             transform: perspective(1px) translateZ(0);
         }
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        @media (min-width: 300px) and (max-width: 500px){
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(2, auto);
+            justify-items: center;
+            align-items: center;
+            
+        }
         figure{
             width: 100px;
             height: 100px;
-            float: left;
-            // text-align: center;
             margin: 20px;
             margin-right: 0px;
             img {
@@ -29,6 +36,7 @@
                 width: 100px;
                 height: 100px;
                 box-shadow: 0 8px 7px #ccc;
+                justify-self: center;
             }
         }
         
@@ -39,8 +47,11 @@
             margin: 20px;
             margin-left: 0px;
             padding-left: 28px;
+            @media (min-width: 300px) and (max-width: 500px){
+                text-align: center;
+            }
             .title-card {
-                display: block;
+                display: inline-block;
                 width: 100%;
                 // white-space: nowrap;
                 overflow: hidden;
@@ -59,6 +70,8 @@
             }
             .section-info-sermon{
                 font-size: 17px;
+                display: block;
+                max-width: 100%;
                 i{
                     color: $primary-color;
                     // margin-right: 15px;
@@ -66,6 +79,7 @@
                 em{
                     color: #212529;
                     padding-left: 15px;
+                    max-width: 100%;
                 }
             }
             .ringkasan-khotbah{

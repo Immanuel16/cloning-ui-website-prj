@@ -79,3 +79,9 @@
     // top: 10px !important;
     z-index: 1200 !important;
 }
+
+input:focus{
+    border-color: $primary-color !important;
+    transition: none;
+    box-shadow: none !important;
+}
